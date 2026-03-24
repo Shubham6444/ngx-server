@@ -1,11 +1,10 @@
-require("dotenv").config();
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const REPO_DIR = path.join(__dirname, "repos");
 
 if (!fs.existsSync(REPO_DIR)) fs.mkdirSync(REPO_DIR, { recursive: true });
