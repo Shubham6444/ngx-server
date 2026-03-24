@@ -34,6 +34,9 @@ app.post("/push/:username/:repoName", upload.single("file"), (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("ok")
+})
 // Download repo (clone)
 app.get("/clone/:username/:repoName", (req, res) => {
   const { username, repoName } = req.params;
